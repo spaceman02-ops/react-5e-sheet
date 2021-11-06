@@ -1,0 +1,56 @@
+.noselect {
+    @include noSelect;
+}
+
+.item-enter {
+    opacity: 0;
+}
+.item-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+.item-exit {
+    opacity: 1;
+}
+.item-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-out;
+}
+
+.square_btn {
+    @include flex-col();
+    @include noSelect();
+    @include shadow;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 5px;
+    width: 120px;
+    padding: 2px;
+    margin: 2px;
+    border: 1px solid;
+    text-decoration: none;
+    background-color: gainsboro;
+    font-size: 13px;
+    transition: background-color ease 250ms;
+    &:active {
+        transform: translateY(2px);
+    }
+}
+
+.iconButton {
+    @include noSelect;
+    @include flex-col;
+    @include shadow;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    align-items: center;
+    &:active {
+        transform: translateY(2px);
+    }
+    background-color: whitesmoke;
+}

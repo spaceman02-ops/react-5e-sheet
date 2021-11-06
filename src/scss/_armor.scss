@@ -1,0 +1,39 @@
+.armorHeading {
+    @include flex-row;
+    align-items: center;
+}
+.WrapAC {
+    @include flex-col();
+    @include shadow;
+    margin: 5px;
+    justify-content: flex-start;
+    background-color: gainsboro;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    height: auto;
+    width: 30%;
+
+    .armor {
+        @include flex-row();
+
+
+        align-items: center;
+        .armorTitle {
+            width: 60%;
+        }
+
+        .armorBonus {
+            width: 15%;
+        }
+        input {
+            padding: 5px;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            margin: 5px;
+            border-radius: 5px;
+            background-color: whitesmoke;
+        }
+    }
+}

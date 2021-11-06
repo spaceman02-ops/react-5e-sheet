@@ -1,0 +1,122 @@
+@import "mixins";
+@import "armor";
+@import "overview";
+@import "feats";
+@import "stats";
+@import "attacks";
+@import "utilities";
+@import "spells";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Zen+Antique+Soft&display=swap");
+$light-color: #99968f;
+$lighter-color: #ffffff;
+
+input {
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 2px;
+    margin: 2px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Slab", serif;
+}
+
+body {
+    background-color: rgb(209, 194, 194);
+    @include flex-col;
+    align-items: center;
+}
+
+.App {
+    @include flex-col;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    max-width: 1300px;
+}
+
+.Bio {
+    @include flex-row;
+    font-size: 14px;
+    width: 90%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Stats {
+    @include flex-row;
+    justify-content: space-between;
+    width: 90%;
+}
+.Skills {
+    @include flex-row();
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.bottomStats {
+    @include flex-row();
+    width: 90%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 1100px) {
+    .bottomStats {
+        @include flex-col;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .bottomStats > div {
+        width: 90%;
+    }
+    body {
+        @include flex-col;
+        align-items: center;
+    }
+    .Stats {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .App {
+        @include flex-col;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .Overview {
+        width: 90%;
+    }
+
+    .Bio {
+        @include flex-col;
+        font-size: 14px;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    }
+    .Skills {
+        @include flex-row;
+        height: auto;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 0px;
+    }
+    .formWrapper {
+        width: 100%;
+        margin: 2px;
+        .label {
+            visibility: hidden;
+            display: none;
+        }
+        input {
+            width: 100%;
+        }
+    }
+}

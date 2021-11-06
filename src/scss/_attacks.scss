@@ -1,0 +1,46 @@
+.attackHeader {
+    @include flex-row();
+}
+.attack {
+    @include flex-col();
+    padding: 0px 10px 10px 10px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.damageHolder {
+    @include flex-row();
+    align-items: center;
+    width: 100%;
+    input {
+        width: 50%;
+    }
+}
+
+.attackHolder {
+    @include flex-col;
+    align-items: center;
+
+}
+
+.WrapAttacks {
+    @include flex-col;
+    @include shadow;
+    align-items: center;
+    margin: 5px;
+    background-color: gainsboro;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.editButtons {
+    @include flex-row;
+}
+
+.prof {
+    @include flex-row;
+    justify-content: flex-start;
+    align-items: center;
+}

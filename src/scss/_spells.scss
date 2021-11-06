@@ -1,0 +1,73 @@
+.spellHeader {
+    @include flex-row();
+}
+.spell {
+    @include helpme;
+    @include flex-col();
+    padding: 0px 10px 10px 10px;
+    border-radius: 5px;
+    border: 1px solid;
+    width: 95%;
+    margin: 5px;
+
+    textarea {
+        height: 150px;
+        margin: 10px;
+        border-radius: 5px;
+        border: 1px solid;
+        padding: 5px;
+        resize: none;
+    }
+}
+.spellInputs {
+    @include flex-row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.formWrapper {
+    @include flex-col;
+    width: 200px;
+    margin: 5px;
+    .label {
+        padding: 5px;
+        height: 20%;
+        line-height: 15px;
+    }
+
+    input, select {
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid;
+        padding: 5px;
+        white-space: normal;
+        outline: none;
+        font-size: 15px;
+        resize: none;
+        @include shadow;
+    }
+}
+
+.spellHolder {
+    @include flex-col;
+    align-items: center;
+    width: 95%;
+
+}
+
+.WrapSpells {
+    @include flex-col;
+    @include shadow;
+    align-items: center;
+    margin: 5px;
+    background-color: gainsboro;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.editButtons {
+    @include flex-row;
+}

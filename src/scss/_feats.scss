@@ -1,0 +1,55 @@
+@use "mixins";
+@use "utilities";
+
+.allFeats {
+    @include flex-col();
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5px;
+    background-color: gainsboro;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    height: auto;
+    @include shadow;
+    width: 30%;
+}
+
+.featContainer {
+
+    @include flex-col;
+    justify-content: flex-start;
+    align-items: center;
+    textarea {
+        height: 250px;
+        margin: 10px;
+        border-radius: 5px;
+        border: 1px solid;
+        padding: 7px;
+        font-size: 15px;
+        resize: none;
+    }
+}
+
+.featTop {
+    @include flex-row();
+    align-items: center;
+    justify-content: center;
+
+    input {
+        font-size: 15px;
+        font-weight: bold;
+        margin: 5px;
+        border-radius: 5px;
+        background-color: whitesmoke;
+        padding: 5px;
+    }
+}
+.featBottom {
+    @include flex-col();
+    align-items: center;
+}
+.featHeader {
+    @include flex-row;
+    align-items: center;
+}

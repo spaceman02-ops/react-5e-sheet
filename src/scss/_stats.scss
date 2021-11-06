@@ -1,0 +1,87 @@
+.Ability {
+    margin: 5px;
+    @include shadow;
+    background-color: gainsboro;
+    @include flex-col;
+    justify-content: flex-start;
+    height: auto;
+    width: 150px;
+    border: 1px solid;
+    .title {
+        @include flex-col();
+
+        background-color: gainsboro;
+        padding: 10px;
+        text-align: center;
+        height: auto;
+        border-bottom: 1px solid;
+        align-items: center;
+
+        .score {
+            overflow: hidden;
+            height: 60px;
+            width: 60px;
+            background-color: white;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 50%;
+            border: 2px solid;
+            @include flex-col;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            input[type="number"] {
+                -moz-appearance: textfield;
+            }
+            .levelForm {
+                width: 100%;
+                height: 200%;
+                font-size: 32px;
+                text-align: center;
+                border: none;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+    .bscontainer {
+        @include flex-row;
+        height: auto;
+        .bs:first-child {
+            border-right: 1px solid;
+        }
+        .bs {
+            padding: 2px;
+
+            font-size: 35px;
+            width: 50%;
+            text-align: center;
+            line-height: 150%;
+        }
+    }
+
+    .bslabels {
+        background-color: gainsboro;
+        @include flex-row;
+        justify-content: space-around;
+        height: auto;
+
+        .lab:first-child {
+            border-right: 1px solid;
+        }
+        .lab {
+            border-top: 1px solid;
+            padding: 5px;
+            width: 50%;
+
+            text-align: center;
+        }
+    }
+}
