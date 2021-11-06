@@ -103,32 +103,32 @@ const basicSkill = [
 const abilities = [
     {
         name: "Strength",
-        score: 20,
+        score: 10,
         profSave: false,
     },
     {
         name: "Dexterity",
-        score: 16,
+        score: 10,
         profSave: false,
     },
     {
         name: "Constitution",
-        score: 13,
+        score: 10,
         profSave: false,
     },
     {
         name: "Intelligence",
-        score: 12,
-        profSave: true,
+        score: 10,
+        profSave: false,
     },
     {
         name: "Wisdom",
-        score: 9,
+        score: 10,
         profSave: false,
     },
     {
         name: "Charisma",
-        score: 9,
+        score: 10,
         profSave: false,
     },
 ];
@@ -153,23 +153,23 @@ const SkillData = basicSkill.map(
 );
 
 const bioData = {
-    race: `Aasimar`,
-    age: `53`,
-    background: `Sailor`,
-    XP: `34999`,
-    eyes: `Brown`,
-    hair: `Blonde`,
-    height: `6 feet`,
-    weight: `200 lb`,
-    level: `17`,
-    class: `Ranger`,
+    race: ``,
+    age: ``,
+    background: ``,
+    XP: ``,
+    eyes: ``,
+    hair: ``,
+    height: ``,
+    weight: ``,
+    level: `1`,
+    class: ``,
 };
 
 const featsTraits = [
     {
-        title: "Lucky",
+        title: "",
         content:
-            "You can reroll a 1 a few times per day. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ",
+            "",
         key: 123,
         id: 123,
     },
@@ -177,12 +177,11 @@ const featsTraits = [
 
 const initAttacks = [
     {
-        title: "Flame-tongue Longsword",
+        title: "",
         damage: [
             { type: "slashing", dice: "1d8", id: 123 },
-            { type: "fire", dice: "2d6", id: 124 },
         ],
-        ability: "Charisma",
+        ability: "Strength",
         accuracyBonus: "0",
         damageBonus: "0",
         id: 123,

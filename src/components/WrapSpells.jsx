@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Spell from "./Spell";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { initSpells } from "../data/data";
@@ -18,7 +17,7 @@ const WrapSpells = ({ abilities, pb }) => {
         }
 
         if (action === "toggle") {
-            y[index]["proficient"] = !y[index]["proficient"];
+            y[index]["concentration"] = !y[index]["concentration"];
         }
         setspells(y);
     }

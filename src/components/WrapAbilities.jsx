@@ -1,6 +1,6 @@
 import Ability from "./Ability";
 
-const Stats = ({ abilities, adjustScore, pb }) => {
+const Stats = ({ abilities, adjustScore, pb, toggleSaveProf }) => {
     const showAbilities = abilities.map((i, v) => {
         return (
             <Ability
@@ -8,6 +8,7 @@ const Stats = ({ abilities, adjustScore, pb }) => {
                 score={i.score}
                 profSave={i.profSave}
                 adjustScore={adjustScore}
+                toggleSaveProf={toggleSaveProf}
                 key={`stats${v}`}
                 pb={pb}
             />

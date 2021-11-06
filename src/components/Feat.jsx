@@ -1,7 +1,7 @@
-import { useState } from "react";
+import {useStickyState} from '../utilities/functions'
 
 const Feat = ({ title, content, id, deleteFeat, updateFeat }) => {
-    const [collapse, setcollapse] = useState({ open: false });
+    const [collapse, setcollapse] = useStickyState({ open: false }, 'featCollapse');
 
     const toggleCollapse = () => {
         setcollapse({ open: !collapse.open });

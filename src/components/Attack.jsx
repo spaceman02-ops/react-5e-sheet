@@ -96,7 +96,7 @@ const Attack = ({ el, abilities, updateAttack, pb }) => {
             <div className="editButtons">
                 <div className="iconButton" onClick={toggleCollapse}>
 
-                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                        <i className="fa fa-pencil" aria-hidden="true"></i>
 
                 </div>
                 <div

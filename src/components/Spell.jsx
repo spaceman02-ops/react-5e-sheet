@@ -37,7 +37,7 @@ const Spell = ({ el, abilities, updateSpell, pb }) => {
             <h3>{title}</h3>
             <div className="editButtons">
                 <div className="iconButton" onClick={toggleCollapse}>
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <i className="fa fa-pencil" aria-hidden="true"></i>
                 </div>
                 <div
                     className="iconButton"
@@ -125,6 +125,18 @@ const Spell = ({ el, abilities, updateSpell, pb }) => {
                                 value={level}
                                 onChange={handleUpdateSpell("update", "level")}
                             />
+                        </div>
+                    </div>
+                    <div
+                        className="prof"
+                    >
+                        Concentration:{" "}
+                        <div className="iconButton" onClick={handleUpdateSpell("toggle")}>
+                            {concentration ? (
+                                <i className="fas fa-check"></i>
+                            ) : (
+                                <i className="fas fa-times"></i>
+                            )}
                         </div>
                     </div>
                     Description:

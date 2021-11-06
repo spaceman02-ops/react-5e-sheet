@@ -1,7 +1,11 @@
-const Ability = ({ name, score, profSave, adjustScore, pb }) => {
+const Ability = ({ name, score, profSave, adjustScore, pb, toggleSaveProf }) => {
     function handleScoreChange(e) {
         let newScore = e.target.value;
         adjustScore(name, newScore);
+    }
+
+    function handleProfToggle() {
+        toggleSaveProf(name);
     }
     let color = "";
     if (profSave) color = "green";
@@ -25,7 +29,7 @@ const Ability = ({ name, score, profSave, adjustScore, pb }) => {
             </div>
             <div className="bscontainer">
                 <div className="bs">{Math.floor((score - 10) / 2)}</div>
-                <div className="bs" style={{ backgroundColor: color }}>
+                <div className="bs save noselect" style={{ backgroundColor: color }} onClick={handleProfToggle}>
                     {profSave
                         ? Math.floor((score - 10) / 2) + pb
                         : Math.floor((score - 10) / 2)}

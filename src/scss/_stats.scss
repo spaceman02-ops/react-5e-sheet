@@ -7,9 +7,12 @@
     height: auto;
     width: 150px;
     border: 1px solid;
+
+    .save {
+        cursor: pointer;
+    }
     .title {
         @include flex-col();
-
         background-color: gainsboro;
         padding: 10px;
         text-align: center;
@@ -57,6 +60,7 @@
         .bs:first-child {
             border-right: 1px solid;
         }
+
         .bs {
             padding: 2px;
 
@@ -66,7 +70,7 @@
             line-height: 150%;
         }
     }
-
+    
     .bslabels {
         background-color: gainsboro;
         @include flex-row;
